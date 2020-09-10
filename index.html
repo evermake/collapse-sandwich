@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collapse Sandwich Demo</title>
+    <link rel="stylesheet" href="demo.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__container">
+            <div class="header__logo">Welcome!</div>
+            <button class="header__toggle collapse-sandwich" target-id="header-collapse">
+                <span class="collapse-sandwich__bar collapse-sandwich__bar--top"></span>
+                <span class="collapse-sandwich__bar collapse-sandwich__bar--middle"></span>
+                <span class="collapse-sandwich__bar collapse-sandwich__bar--bottom"></span>
+            </button>
+            <div class="header__collapse" id="header-collapse">
+                <nav class="header__nav">
+                    <ul>
+                        <li><a href="#" class="header__link">News</a></li>
+                        <li><a href="#" class="header__link">Services</a></li>
+                        <li><a href="#" class="header__link">About</a></li>
+                        <li><a href="#" class="header__link">Contacts</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <script src="collapse-sandwich.js"></script>
+</body>
+</html>
