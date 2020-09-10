@@ -5,10 +5,8 @@ window.onload = function() {
     let sandwiches = document.querySelectorAll('.collapse-sandwich');
     Array.prototype.forEach.call(sandwiches, function(element) {
         element.addEventListener('click', function(event) {
-            let collapse_target = null;
             let sandwich = event.target;
-            
-            collapse_target = document.getElementById(sandwich.getAttribute('target-id'));
+            let collapse_target = document.getElementById(sandwich.getAttribute('target-id'));
 
             if (sandwich.classList.contains(sandwich_active_class)) {
                 sandwich.classList.remove(sandwich_active_class);
