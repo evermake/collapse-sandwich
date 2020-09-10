@@ -1,0 +1,44 @@
+$sandwich-color: #555 !default;
+$sandwich-width: 24px !default;
+$sandwich-height: 20px !default;
+$sandwich-bar-thickness: 2px !default;
+
+.collapse-sandwich {
+    border: none;
+    appearance: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    max-width: $sandwich-width;
+    max-height: $sandwich-height;
+    min-width: $sandwich-width;
+    min-height: $sandwich-height;
+    position: relative;
+
+    &__bar {
+        pointer-events: none;
+        display: block;
+        position: absolute;
+        background-color: $sandwich-color;
+        width: 100%;
+        height: $sandwich-bar-thickness;
+        transition: all ease-out .15s;
+
+        &--top { top: 0; }
+        &--bottom { bottom: 0; }
+        &--middle {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    // Active state
+    &.active {
+        & .collapse-sandwich__bar {
+            &--top, &--bottom { top: 50%; }
+            &--top { transform: translateY(-50%) rotate(-135deg); }
+            &--middle { opacity: 0; }
+            &--bottom { transform: translateY(-50%) rotate(135deg); }
+        }
+    }
+}
